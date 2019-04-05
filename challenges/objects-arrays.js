@@ -75,17 +75,28 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 
 /* Request 1: Create a new array called universities that contains all the univeristies in the graduates array. */
 
-// let universities = [];
-// for (let i = 0; i < graduates.length; i++) {
-//     universities.push(graduates[i]);
-// }
+ let universities_list = [];
+ for (let k = 0 ; k < graduates.length; k++) {
+     universities_list.push(graduates[k].university);
+ }
 
-// console.log(universities[i]);
+console.log(universities_list);
 
 
-*/ Once you have the new array created, sort the universities alphabetically and log the result. */
-const universities = [];
+// */ Once you have the new array created, sort the universities alphabetically and log the result. */
+// const universities = [];
+// console.log(universities)
+
+const universities = universities_list.sort(function (a, b) {
+      if (a < b) return -1;
+      else if (a > b) return 1;
+      return 0;
+    });
+
+
 console.log(universities)
+
+
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
@@ -93,13 +104,31 @@ The resulting contact information should have a space between the first name and
 Name email@example.com
 
 Log the result of your new array. */
+
 const contactInfo = [];
+for (let t = 0; t < graduates.length; t++) {
+  contactInfo.push(graduates[t].first_name);
+  contactInfo.push(graduates[t].email);
+}
 console.log(contactInfo);
 
 
+
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
-const uni = [];
-console.log(uni);
+
+let uni = [];
+for (let t = 0; t < graduates.length; t++) {
+    if (graduates[t].university.includes("Uni")){
+        uni.push(graduates[t]);
+    }
+}
+console.log(`\n There are`, uni.length, `Uni's in the list:`);
+for (let ab = 0; ab < uni.length; ab++) {
+    console.log(uni[ab]);
+}
+
+
+
 
 
 // ==== ADVANCED Array Methods ====
@@ -171,4 +200,3 @@ console.log(populationTotal);
 Stretch: If you haven't already, convert your array method callbacks into arrow functions.
 
 */
-
