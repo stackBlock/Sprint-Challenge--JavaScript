@@ -30,13 +30,29 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+    1) .forEach executes a provided function once for each array element. 2) .map creates a new array with the results of calling a provided function on every element in the calling array.
+
 2. What is the difference between a function and a method?
+
+    2) THey are both types of functions. 
 
 3. What is closure?
 
+    3) a variable within an upper level of a function
+
 4. Describe the four rules of the 'this' keyword.
 
+4)   1. If the new keyword is used when calling the function, this inside the function is a brand new object.
+        
+    2. If apply, call, or bind are used to call a function, this inside the function is the object that is passed in as the             argument.
+
+    3. If a function is called as a method — that is, if dot notation is used to invoke the function — this is the object that          the function is a property of. In other words, when a dot is to the left of a function invocation, this is the object         to the left of the dot. (ƒ symbolizes function in the code blocks)
+
+    4. If a function is invoked as a free function invocation, meaning it was invoked without any of the conditions present above,        this is the global object. In a browser, it’s window.
+
 5. Why do we need super() in an extended class?
+
+    5) to connect a child to a parent
 
 ## Project Set up
 
