@@ -44,7 +44,7 @@ console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice t
 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
-the nestedfunction is nested past the point where the internal variable is... I other words the nestedfunction is in the closure.
+console.log(`the nestedfunction is nested past the point where the internal variable is... I other words the nestedfunction is in the closure.`)
 
 // Explanation: 
 
